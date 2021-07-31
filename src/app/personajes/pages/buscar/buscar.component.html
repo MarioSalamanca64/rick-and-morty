@@ -1,1 +1,27 @@
-<p>buscar works!</p>
+
+<div class="row">
+    
+        <div class="col-6">Buscador de Personajes</div>
+        <mat-divider></mat-divider>
+        <div class="col-6">
+            <h3>Buscador</h3>
+
+            <mat-form-field class="example-full-width">
+                <input      type="text" 
+                            placeholder="Pick one" 
+                            aria-label="Number" 
+                            matInput 
+                            [(ngModel)]="termino"
+                            [matAutocomplete]="auto"
+                            (input)="buscando()">
+
+                <mat-autocomplete #auto="matAutocomplete">
+                  <mat-option *ngFor="let personaje of personajes" [value]="personaje">
+                    {{personaje.name}}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+
+        </div>
+   
+</div>

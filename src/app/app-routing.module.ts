@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path:'**',
-    loadChildren:() => import('./personajes/personajes.module').then(m => m.PersonajesModule)
+    redirectTo:'home/listado'
   }
 
 ];

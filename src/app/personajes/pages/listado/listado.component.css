@@ -1,0 +1,16 @@
+.acomodar{  
+     /* display: block; */
+    float: left; 
+    margin-left:200px ;
+    margin-top: 30px; 
+    width: 400px;
+}
+
+@media(max-width:361px){
+    .acomodar{
+        float: left; 
+    margin-left: 0px ;
+    margin-top: 30px; 
+    width: 320px;
+    }
+}

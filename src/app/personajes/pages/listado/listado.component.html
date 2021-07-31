@@ -1,1 +1,35 @@
-<p>listado works!</p>
+<h1>Listado de Personajes</h1>
+<mat-divider></mat-divider>
+<br>
+
+<div class="row">
+    <div class="  col-lg-12 col-md-3 col-sm-12 col-ms-12 col-xs-12 margen">
+
+        <mat-card *ngFor="let personaje of personajes" class="acomodar">
+            <mat-card-header>
+            <mat-card-title>{{personaje.name}}</mat-card-title> 
+                <mat-card-subtitle>{{personaje.species}}</mat-card-subtitle>
+            </mat-card-header>
+        
+           <img mat-card-image src="{{personaje.image}}" >
+        
+           <mat-card-content>
+               
+               <p>
+                   <strong>Este personaje esta </strong> {{personaje.status}}
+                   <br>
+                   <strong>Genero </strong>{{personaje.gender}}
+               </p>
+           </mat-card-content>
+        
+           <mat-card-actions>
+               <button mat-button color="warn"
+                        [routerLink]="['/home', personaje.id]">
+                Leer mas.....
+               </button>
+           </mat-card-actions>
+        
+        </mat-card>
+    </div>
+</div>
+

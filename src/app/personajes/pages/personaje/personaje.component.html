@@ -1,1 +1,24 @@
-<p>personaje works!</p>
+<!-- <div class="row" *ngIf="!personaje; eslse divPersoanje">
+    <div class="col" >
+        <mat-spinner class="mx-auto" ></mat-spinner> 
+    </div>
+</div>  -->
+
+<div #divPersoanje>
+    <div class="row">
+        <div class="col-6 ">
+            <img src="{{personaje?.image}}" class="tamano">
+        </div>
+        <div class="col-6">
+            <h3>
+            {{personaje?.name}}
+            </h3>
+            <p>{{personaje?.status}}</p>  
+            <p>{{personaje?.species}}</p> 
+            <p>{{personaje?.type}}</p>  
+            <p>{{personaje?.id}}</p> 
+            <p>{{personaje?.origin.name}}</p> 
+        </div>
+    </div>
+
+</div>
