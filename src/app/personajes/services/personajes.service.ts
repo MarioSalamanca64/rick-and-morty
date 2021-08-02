@@ -9,7 +9,7 @@ import { Personajes,} from '../interface/personajes.interface';
   providedIn: 'root'
 })
 export class PersonajesService {
-  private baseUrl: string = environment.baseUrlAPI;
+  private baseUrl: string = 'https://rickandmortyapi.com/api/character';
 
   constructor( private http:HttpClient ) { }
   //regresa los persojes de la pagina principal 

@@ -11,8 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ListadoComponent implements OnInit {
 
-  constructor(private personajesServices: PersonajesService,
-              private activatedRouter: ActivatedRoute) { }
+  constructor(private personajesServices: PersonajesService,) { }
 
   personajes: any = []; 
 
@@ -23,10 +22,6 @@ export class ListadoComponent implements OnInit {
     this.personajesServices.getPersonajes()
     .subscribe((personajes:Personajes) =>  { this.personajes = personajes.results } 
     );
-    //ver los elemetos en consola 
-    this.activatedRouter.params.subscribe(({id})=> {
-      console.log(id);
-    })
   }
   //la directiva para la paginaciion y no sige al boton seguiente en el ultimo elemento 
   siguientePagina(){
