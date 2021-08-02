@@ -10,6 +10,7 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
 import { PersonajeComponent } from './pages/personaje/personaje.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListadoComponent } from './pages/listado/listado.component';
+import { FiltroPipe } from './pipes/filtro.pipe';
 
 
 
@@ -18,6 +19,7 @@ import { ListadoComponent } from './pages/listado/listado.component';
     PersonajeComponent,
     HomeComponent,
     ListadoComponent,
+    FiltroPipe,
     
     
   ],

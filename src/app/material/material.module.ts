@@ -11,9 +11,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatFormFieldModule}from '@angular/material/form-field';
 import {MatInputModule}from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
+//todo los modulos de materia que utilizamos 
 
 @NgModule({
   declarations: [],
@@ -27,7 +29,9 @@ import {MatInputModule}from '@angular/material/input';
     MatProgressSpinnerModule,
     MatAutocompleteModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatPaginatorModule,
+    
   ],
   imports: [
     CommonModule

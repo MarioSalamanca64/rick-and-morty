@@ -1,12 +1,12 @@
 
 <div class="row">
-    
-        <div class="col-6">Buscador de Personajes</div>
+        <!-- sitema de busqueda y recomendacion de la busqueda  -->
+        <div class="col-12 animate__animated animate__lightSpeedInRight">Buscador de Personajes</div>
         <mat-divider></mat-divider>
-        <div class="col-6">
-            <h3>Buscador</h3>
+        <div class="col-12" fxLayout="colum">
+            <h3 class="animate__animated animate__lightSpeedInRight">Buscador</h3>
 
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="example-full-width" class="col-12">
                 <input      type="text" 
                             placeholder="Pick one" 
                             aria-label="Number" 
@@ -15,13 +15,36 @@
                             [matAutocomplete]="auto"
                             (input)="buscando()">
 
-                <mat-autocomplete #auto="matAutocomplete">
+                <mat-autocomplete autoActiveFirstOption
+                                  #auto="matAutocomplete"
+                                  (optionSelected)="opcionSelecionada($event)">
+
                   <mat-option *ngFor="let personaje of personajes" [value]="personaje">
                     {{personaje.name}}
                   </mat-option>
+                  <mat-option value="" *ngIf="personajes.length === 0 && termino.trim().length > 0">
+                    No se encontro nada con ese Termino {{termino}}
+                  </mat-option>
                 </mat-autocomplete>
               </mat-form-field>
-
         </div>
-   
+
+
+        <!-- contenido del nombre que buscas -->
+        <div row>
+          <div class="col-12 animate__animated animate__lightSpeedInRight">
+            
+            <h3>{{personajeSelecionado.name}}</h3>
+            <h3>{{personajeSelecionado.status}}</h3>
+            <p>{{personajeSelecionado.species}}</p> 
+            <p>{{personajeSelecionado.type}}</p> 
+            <p>{{personajeSelecionado.id}}</p> 
+            <img src="{{personajeSelecionado.image}}" alt="" style="border-radius:20px;">
+          </div>
+           
+        </div>
+
+         
+    
 </div>
+

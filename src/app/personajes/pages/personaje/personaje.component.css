@@ -1,3 +1,23 @@
+/* tamaño de la img  */
 .tamano{
     width: 500px;
+    border-radius: 30px;
+}
+
+@media(max-width:540px){
+    .acomodar{
+        float: left; 
+    margin-left: 0px ;
+    margin-top: 30px; 
+    width: 320px;
+    }
+}
+
+@media(max-width:360px){
+    .acomodar{
+        float: left; 
+    margin-left: 0px ;
+    margin-top: 30px; 
+    width: 260px;
+    }
 }

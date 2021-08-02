@@ -14,18 +14,14 @@ export class PersonajeComponent implements OnInit {
   personaje!: any ;
 
   constructor(private activatedRouter:ActivatedRoute,
-              private persoanjesServices:PersonajesService) { }
+              private personajesServices:PersonajesService) { }
 
   ngOnInit(): void {
-
+    //regresa persoanjes por id de el personaje 
     this.activatedRouter.params
     .pipe(
-      switchMap( ({id}) => this.persoanjesServices.getPersonajePorId(id)) )
-      .subscribe((personaje: Personajes) => {this.personaje = personaje})
-    
-
-
-
+      switchMap( ({id}) => this.personajesServices.getPersonajePorId(id)) )
+      .subscribe((personaje: Personajes) => this.personaje = personaje)
   }
 
 }

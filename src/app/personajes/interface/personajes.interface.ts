@@ -24,6 +24,18 @@ export interface Result {
     url:      string;
     created:  Date;
 }
+export interface Personaje {
+    id?:       number;
+    name:     string;
+    status:   Status;
+    species:  Species;
+    type:     string;
+    gender:   Gender;
+    image:    string;
+    created:  Date;
+}
+
+
 
 export enum Gender {
     Female = "Female",
