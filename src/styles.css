@@ -2,9 +2,7 @@
 
 html, body { 
     max-height: 100%;
-    max-width: 100%; 
-    
-    
+    max-width: 100%;    
 }
 body {
     overflow-y:hidden;
